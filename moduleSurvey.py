@@ -12,8 +12,8 @@ from datetime import datetime
 Don't forget, this script requires the key.json file to be in its working directory.
 '''
 
-os.getcwd()
-dir = os.chdir(dir)
+os.chdir(os.getcwd())
+dir = os.getcwd()
 
 username = input('What is your username?')
 password = input('What is your password?')
