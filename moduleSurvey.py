@@ -70,7 +70,7 @@ print("Filtering...")
 time.sleep(2) # Wait 2 seconds
 try:
     df = pd.read_excel('results-survey683435.xlsx')
-    df = df[df['TP. Teaching Period'].isin(["20T3","21T1","21T2"]) & df['Campus. Campus'].isin(["Liverpool", "London", "Oxford", "Glasgow","Online"])].dropna(how='all')
+    df = df[df['TP. Teaching Period'].isin(["20T3","21T1","21T2","21T3"]) & df['Campus. Campus'].isin(["Liverpool", "London", "Oxford", "Glasgow","Online"])].dropna(how='all')
 except:
     pass
 
@@ -82,7 +82,7 @@ credentials = service_account.Credentials.from_service_account_file(
         SERVICE_ACCOUNT_FILE, scopes=SCOPES)
 
 # The ID and range of a sample spreadsheet.
-modulesurveydata = '1UCYodN9q1MYt3embI-oelo9994ywSpYolnkGduzA4JM' ## Change this to the new Survey Tracker
+modulesurveydata = 'path' ## Change this to the new Survey Tracker
 service = build('sheets', 'v4', credentials=credentials)
 
 # Call the Sheets API and write data
